@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="bn"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kawsar - A passionate web developer showcasing projects and skills."> <title>Kawsar - Web Developer</title>
+
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            animation: fadeInDown 1s ease-out; /* হেডার অ্যানিমেশন */
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Section Styles */
+        main section {
+            padding: 40px 20px;
+            border-bottom: 1px solid #ddd;
+            animation: fadeInUp 1s ease-out forwards; /* সেকশন অ্যানিমেশন */
+            opacity: 0; /* অ্যানিমেশনের শুরুতে অদৃশ্য থাকবে */
+            transform: translateY(20px);
+        }
+        
+        /* অ্যানিমেশনের জন্য ডিলে */
+        #about { animation-delay: 0.2s; }
+        #skills { animation-delay: 0.4s; }
+        #contact { animation-delay: 0.6s; }
+
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+            font-size: 2rem;
+        }
+
+        /* About Me Section */
+        #about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap; 
+        }
+
+        .about-content {
+            flex: 2;
+            min-width: 300px; 
+            padding-right: 20px;
+        }
+
+        .profile-picture {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .profile-picture img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-picture img:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Skills Section */
+        #skills ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #skills li {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 8px;
+            border-radius: 5px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        #skills li:hover {
+            transform: translateY(-5px); /* হোভারে উপরে উঠবে */
+            background-color: #555;
+        }
+
+        /* Contact & Feedback Form */
+        #contact form {
+            max-width: 600px;
+            margin: auto;
+            padding: 25px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #333;
+            box-shadow: 0 0 8px rgba(51, 51, 51, 0.2);
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background: #555;
+            transform: scale(1.02); /* বাটনে হোভার ইফেক্ট */
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+        
+        .social-icon img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .social-icon img:hover {
+            transform: scale(1.2);
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Kawsar</h1>
+            <p>Passionate Web Developer</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="about">
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>
+                    I am a creative and detail-oriented web developer with a passion for building intuitive and dynamic user interfaces. I enjoy turning complex problems into simple, beautiful, and functional designs. When I'm not coding, I enjoy exploring new technologies and contributing to open-source projects.
+                </p>
+            </div>
+            <div class="profile-picture">
+                <img src="kaws.jpg" alt="A photo of Kawsar">
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>My Skills</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>MongoDB</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact & Feedback</h2>
+            <p>Feel free to get in touch or send me your feedback using the form below.</p>
+            
+            <form action="#" method="post"> <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <h3>Connect with me</h3>
+        <div style="margin-top: 10px; display: flex; justify-content: center; gap: 20px;">
+            <a href="mailto:ahmadkawsarbd@gmail.com" class="social-icon" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon" width="32">
+            </a>
+            <a href="https://m.facebook.com/kawsar.mahmud.afridi/" class="social-icon" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook Icon" width="32">
+            </a>
+            <a href="https://wa.me/qr/XXBFHMIZF2ROJ1" class="social-icon" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Icon" width="32">
+            </a>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9em;">&copy; 2025 Kawsar. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
